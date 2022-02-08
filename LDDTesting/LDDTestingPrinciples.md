@@ -1,4 +1,8 @@
-# LDD Testing Principles
+---
+title: LDD Testing Principles
+author: Jesse Stone, PDS Small Bodies Node
+date: 2021-02-09
+---
 
 ## Why Tests?
 
