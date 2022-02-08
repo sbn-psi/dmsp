@@ -1,4 +1,8 @@
-# Visualizing LDDs
+---
+title: Visualizing LDDs
+author: Jesse Stone, PDS Small Bodies Node
+date: 2021-02-09
+---
 
 ## Why Visualize LDDs
 
