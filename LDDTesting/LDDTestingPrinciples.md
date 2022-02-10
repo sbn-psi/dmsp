@@ -1,7 +1,7 @@
 ---
 title: LDD Testing Principles
 author: Jesse Stone, PDS Small Bodies Node
-date: 2021-02-09
+date: 2021-02-10
 ---
 
 ## Why Tests?
@@ -35,8 +35,8 @@ date: 2021-02-09
 
 ## Valid Label (passing) tests
 
-* These are meant to test situtations where the label should work
-* This can contain a variety of different labels that exercise each aspect of the dictionary
+* These are meant to test situations where the label should work
+* These can consist of a variety of different labels that exercise each aspect of the dictionary
 
 ## Invalid Label tests
 
@@ -82,7 +82,9 @@ date: 2021-02-09
 * Hand writing labels
 * Injecting discipline area fragments into label templates
 * Mutating existing labels
-    * Keep a mapping of xpaths and operations to perform on a location
+    * Keep a mapping of *XPath*s and operations to perform on a location
+
+## Demonstration - LDD Test Generator
 
 ## Monolithic tests
 
@@ -102,8 +104,8 @@ date: 2021-02-09
 
 * You want to have enough to thoroughly test your dictionary.
   * Typically, this means that every class should be used at least once
-  * Every schematron rule should be used at least once, as well.
-* Too many tests can cause problems
+  * Every schematron rule should pass and fail at least once, as well.
+* Too many tests can cause problems (This does *not* mean don't write tests)
   * The biggest problem with too many tests is that they need to be maintained
   * Maintenance can be necessary when either your dictionary changes, or when the dependencies change (IM changes, upstream dictionaries, etc)
   * A test should have its own job -- it shouldn't just functionally duplicate another test
@@ -115,7 +117,9 @@ date: 2021-02-09
 
 ## Exercise every schematron rule
 
-* At least one failing test should fail a schematron rule.
+* At least one invalid label test should fail each schematron rule.
+* At least one valid label test should pass each schematron rule
+* At least one valid label test should not trigger the schematron rule, if possible.
 * This is especially important, since schematron rules can be prevented from triggering if incorrectly written.
 
 ## Demonstration - Nucspec Dictionary Tests
@@ -125,12 +129,9 @@ date: 2021-02-09
 * Documentation can be as simple as a file that lists the test name and what it is testing.
 * This will remind you how each test is expected to fail, or what each test is intended to exercise.
 * If writing a monolithic test, this can be further developed into the expected output for comparison in a future version of the EN testing tool.
+* Documenation can also be written inline. It would be valuable to note precisely which line should fail.
 
 ## Organize the tests
 
 At minimum, tests should be organized into valid and invalid label tests. Although this is embedded in the name, sorting them will make it easier to find the test that you need,
 especially as the number of tests grows.
-
-
-
-
