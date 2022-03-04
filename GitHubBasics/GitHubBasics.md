@@ -2,13 +2,21 @@
 
 ## What is version control?
 
+Version control is a system that will allow to save multiple versions of a document transparently. This means that you do not have to resort to keeping multiple versions of a file with different names manually. The version control system does this for you. It also remembers when each version of a document was created, allowing you to track changes over time.
+
 ## What is distributed version control?
+
+Distributed version control is an improvement to version control that allows multiple users to collaborate on a project, and share their changes with each other more easily. In most distributed version control systems, each person keeps a complete history of the changes to a project, allowing them to work independently.
+
+Git is one of the most populat distributed version control systems.
 
 ## What is GitHub?
 
-GitHub is a hosting service for git repositories. It is also has many other features that make life easier for programmers (release distribution, issue tracking, websites, etc). 
+GitHub is a hosting service for git repositories. In addition to creating a central repository for users to coordinate work on their projects, it also provides a simpler, web-based interface into git. It is also has many other features that make life easier for programmers (release distribution, issue tracking, websites, etc). 
 
 ## What are GitHub repos?
+
+A git repo is a complete history of a project. This allows a user with a copy of the repo to see all of the work that has been done, along with seeing how the project has changed over time.
 
 ## Cloning a repo
 
