@@ -50,7 +50,7 @@ date: 2021-02-10
   * The simpler the part that is not under test is, the better.
 * If this is an invalid label test, introduce errors
 * Mark the label as a valid label test or an invalid label test
-  * Add either `_VALID` or `_INVALID` to the end of the filename
+  * Add either `_VALID` or `_FAIL` to the end of the filename
 * Commit the label
 
 ## Demonstration - Display Dictionary Tests
@@ -129,7 +129,7 @@ date: 2021-02-10
 * Documentation can be as simple as a file that lists the test name and what it is testing.
 * This will remind you how each test is expected to fail, or what each test is intended to exercise.
 * If writing a monolithic test, this can be further developed into the expected output for comparison in a future version of the EN testing tool.
-* Documenation can also be written inline. It would be valuable to note precisely which line should fail.
+* Documentation can also be written inline. It would be valuable to note precisely which line should fail.
 
 ## Organize the tests
 
