@@ -14,7 +14,8 @@ Git is one of the most populat distributed version control systems.
 
 GitHub is a hosting service for git repositories. In addition to creating a central repository for users to coordinate work on their projects, it also provides a simpler, web-based interface into git. It is also has many other features that make life easier for programmers (release distribution, issue tracking, websites, etc). 
 
-## What are GitHub repos?
+
+## Essential Concept: Repositories (repos)
 
 A git repo is a complete history of a project. This allows a user with a copy of the repo to see all of the work that has been done, along with seeing how the project has changed over time.
 
@@ -35,6 +36,10 @@ There is a good chance that you will not have permission to make changes to anot
 
 https://docs.github.com/en/get-started/quickstart/fork-a-repo
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks    
+
+## Essential Concept: Branches
+
+Branches are sets of commits that represent different directions for development. Branches could result from wanting to try different ideas for a feature, working on multiple features or bugfixes at the same time, or holding groups of features until they are ready for deployment. In each of these cases, branches are eventually merged together into other branches, and ultimately merged back into the main branch.
 
 ## Creating a branch
 
