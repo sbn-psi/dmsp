@@ -14,6 +14,7 @@ Git is one of the most populat distributed version control systems.
 
 GitHub is a hosting service for git repositories. In addition to creating a central repository for users to coordinate work on their projects, it also provides a simpler, web-based interface into git. It is also has many other features that make life easier for programmers (release distribution, issue tracking, websites, etc). 
 
+Think of GitHub as a service like Dropbox for your git repositories.
 
 ## Essential Concept: Repositories (repos)
 
