@@ -28,29 +28,13 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 
 ## Forking a repo
 
-There is a good chance that you will not have permission to make changes to another person's repository. The GitHub way of resolving this is by allowing you to make a copy of a repository, make your changes there, and ask the owner of the repository to copy your changes back into their repository.
+There is a good chance that you will not have permission to make changes to another person's repository. The GitHub way of resolving this is by allowing you to make a GitHub-hosted copy of the repository (called a fork) make your changes there, and ask the owner of the repository to copy your changes back into their repository (a pull request).
 
 ![](images/fork1.png)
 ![](images/fork2.png)
 
 https://docs.github.com/en/get-started/quickstart/fork-a-repo
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks    
-
-
-## Pulling branches
-
-If the repository has changed since you last cloned it, you can copy those new changes down to your local copy. If you made a branch, this will not even overwrite your changes.
-
-![](images/pull1.png)
-![](images/pull2.png)
-
-https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
-
-
-## Checking out branches
-
-![](images/checkout.png)
-![](images/checkout2.png)
 
 ## Creating a branch
 
@@ -59,8 +43,24 @@ You can create branches to try out ideas without necessarily making them a perma
 ![](images/create1.png)
 ![](images/create2.png)
 
+## Checking out branches
+
+You can switch between branches at any time. This is called "checking out" a branch.
+
+![](images/checkout.png)
+![](images/checkout2.png)
+
+
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository
 
+## Pulling branches
+
+If the repository on GitHub has changed since you last cloned it, you can copy those new changes down to your local copy. If you are on a different branch, this will not even overwrite your changes.
+
+![](images/pull1.png)
+![](images/pull2.png)
+
+https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
 
 
 ## Committing changes
