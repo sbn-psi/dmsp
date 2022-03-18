@@ -6,21 +6,23 @@ Version control is a system that will allow to save multiple versions of a docum
 
 ## What is distributed version control?
 
-Distributed version control is an improvement to version control that allows multiple users to collaborate on a project, and share their changes with each other more easily. In most distributed version control systems, each person keeps a complete history of the changes to a project, allowing them to work independently.
+Distributed version control is an improvement to version control that makes it easier for multiple users to collaborate on a project, and share their changes with each other more easily. In most distributed version control systems, each person keeps a complete history of the changes to a project, allowing them to work independently. They can share changes with each other in the context of all of the other development that has happened so far.
 
-Git is one of the most populat distributed version control systems.
+Git is one of the most popular distributed version control systems.
 
 ## What is GitHub?
 
 GitHub is a hosting service for git repositories. In addition to creating a central repository for users to coordinate work on their projects, it also provides a simpler, web-based interface into git. It is also has many other features that make life easier for programmers (release distribution, issue tracking, websites, etc). 
 
-Think of GitHub as a service like Dropbox for your git repositories.
+Think of GitHub as a service like iCloud or Google Docs for your git repositories. iCloud and Google docs allow you to synchronize your files with online storage, but they also allow to edit your files in a browser, and synchronize those changes with other users. GitHub follows a similar model: it offers services on top of what a normal Git repository would provide.
 
 ## Essential Concept: Repositories (repos)
 
-A git repo is a complete history of a project. This allows a user with a copy of the repo to see all of the work that has been done, along with seeing how the project has changed over time.
+A git repo is a complete history of a project. This allows a user with a copy of the repo to see all of the work that has been done, along with seeing how the project has changed over time. Repos can be synchronized with other user's repos, and with online services such as GitHub.
 
 ## Cloning a repo
+
+While you can do an amazing amount of work within the GitHub website, it would be a good idea to make a copy of the repo on your own computer, so that you can work without an internet connection. You will also be able to produce higher quality versions of the project before anyone else can see them.
 
 This will copy a repository down to your local machine. From here, you can mess with the code all you want, and the copy on GitHub will be unaffected.
 
@@ -40,7 +42,7 @@ https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/workin
 
 ## Essential Concept: Branches
 
-Branches are sets of commits that represent different directions for development. Branches could result from wanting to try different ideas for a feature, working on multiple features or bugfixes at the same time, or holding groups of features until they are ready for deployment. In each of these cases, branches are eventually merged together into other branches, and ultimately merged back into the main branch.
+Branches are sets of changes that represent different directions for development. Branches could result from wanting to try different ideas for a feature, working on multiple features or bugfixes at the same time, or holding groups of features until they are ready for deployment. In each of these cases, branches are eventually merged together into other branches, and ultimately merged back into the main branch.
 
 ## Creating a branch
 
@@ -77,8 +79,6 @@ Commiting changes keeps a snapshot of your project at a certain point in time. E
 
 https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits
 https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project
-
-
 
 ## Pushing branches
 
