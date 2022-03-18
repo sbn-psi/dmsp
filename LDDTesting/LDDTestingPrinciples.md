@@ -15,6 +15,16 @@ date: 2021-02-10
   * Regressions are unintended side-effects created by making changes
 * Warns if changes are not backwards-compatible
 
+## Testing methodologies
+
+* Regression testing
+  * This method generates the dictionary, and validates special labels against the dictionary.
+    * Thse labels are specifically designed to pass or fail validation
+    * If the validation result does not match the intent of the label, then there is a problem with the dictionary.
+* Static analysis
+  * This evaluates the dictionary according to predefined rules, without necessarily comparing it against labels.
+* Regression testing and static analysis are complementary tools, and both are needed to fully evaluate a dictionary.
+
 ## How do tests work
 
 * Upon a push to the repository, GitHub will:
@@ -135,3 +145,13 @@ date: 2021-02-10
 
 At minimum, tests should be organized into valid and invalid label tests. Although this is embedded in the name, sorting them will make it easier to find the test that you need,
 especially as the number of tests grows.
+
+## Static analysis tools
+
+* Validate tool
+  * Ingest LDD files are part of the PDS4 information model, just like products. This means that the validator can run against them.
+* LDDTool
+  * Catches many problems with a dictionary while it is being generated.
+* LDDPreflight
+  * Runs several of the new rules proposed at this meeting, and raises any voilations.
+* These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
