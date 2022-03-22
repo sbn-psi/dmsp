@@ -4,9 +4,11 @@
 
 The PDS-Data-Dictionaries.github.io site is a site similar to a wiki that can be edited by multiple users. However, unlike a wiki, there is no preview function, making it difficult to evaluate edits without having them go live.
 
-## Two Solutions
+## Three Solutions
 
 It is possible to preview your changes either by forking the PDS-Data-Dictionaries.github.io repo, or by cloning the repo to your local machine and using Sphinx. 
+
+There are three ways to preview the changes to your documentation. The first is to fork the PDS-Data-Dictionaries.github.io repo, and publish the fork to a different URL with Github pages. The second way is to use the github action that is built into the PDS-Data-Dictionaries.github.io repo. The third way is to run Sphinx on the repo and convert it into HTML. All three of these methods use the Sphinx processor to generate the HTML, but there are differences in where the source files come from, when the source files are processed, and where the resulting HTML files go.
 
 Sphinx is a python program that will convert Markdown and Restructured Text documents to HTML. While there is an installation that you must perform, it should be possible to install it without administrative privileges.
 
@@ -20,6 +22,7 @@ Sphinx is a python program that will convert Markdown and Restructured Text docu
   * Viewing your changes requires a push
   * Your changes are still publicly accessible
   * Takes time to build on the server side
+  * Only works with the main branch (unless you reconfigure GitHub pages)
 
 
 #### Fork the repository
@@ -55,6 +58,23 @@ Sphinx is a python program that will convert Markdown and Restructured Text docu
   <source src="navigate_to_page.mp4" type="video/mp4">
 </video>
 
+### Using the PDS-Data-Dictionaries GitHub action
+
+* Advantages
+  * Works anywhere
+  * No install necessary
+  * Branching is simpler than forking
+  * Works with any branch
+  * Changes are less public than publishing over GitHub pages
+* Disadvantages
+  * Viewing your changes requires a push
+  * Your changes are still publicly accessible
+  * Takes time to build on the server side
+  * You either need to 
+    * configure github tokens (if you're using a fork)
+    * have write access to the original repo
+
+
 ### Building the docs locally
 
 * Advantages
@@ -87,7 +107,7 @@ Sphinx is a python program that will convert Markdown and Restructured Text docu
 
 * Go to the docs directory
     * `cd docs`
-* Build the html
+* Build the html    
     * `make clean html`
 
 #### View the docuementation
