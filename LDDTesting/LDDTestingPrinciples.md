@@ -109,6 +109,10 @@ date: 2022-03-23
 
 ## Demonstration - LDD Test Generator
 
+<https://github.com/sbn-psi/ldd_utilities/tree/master/LddTestGenerator>
+
+![generator](images/qr/generator.png)
+
 ## Monolithic tests
 
 * Multiple tests can be packed into a single label
@@ -176,6 +180,12 @@ especially as the number of tests grows.
 * LDDPreflight
   * Runs several of the new rules proposed at this meeting, and raises any voilations.
 * These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
+
+## Demonstration - LDDPreflight
+
+<https://github.com/sbn-psi/ldd_utilities/tree/master/LddPreflight>
+
+![preflight](images/qr/preflight.png)
 
 
 ## Access this presentation
