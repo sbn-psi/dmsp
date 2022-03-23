@@ -70,6 +70,10 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-disp/tree/main/test>
 
+### Objectives
+
+* Demonstrate simple passing and failing tests.
+
 ![ldd-disp](images/qr/ldd-disp.png)
 
 
@@ -99,6 +103,10 @@ date: 2022-03-23
 
 ![ldd-survey](images/qr/ldd-survey.png)
 
+### Objectives
+
+* Demonstrate granular tests
+
 ## Generating Test Labels
 
 * Hand writing labels
@@ -113,6 +121,7 @@ date: 2022-03-23
 
 ![generator](images/qr/generator.png)
 
+
 ## Monolithic tests
 
 * Multiple tests can be packed into a single label
@@ -122,6 +131,10 @@ date: 2022-03-23
 ## Demonstration - Spectral Dictionary Tests
 
 <https://github.com/pds-data-dictionaries/ldd-spectral/tree/main/test>
+
+### Objectives
+
+* Demonstrate monolithic tests
 
 ![ldd-spectral](images/qr/ldd-spectral.png)
 
@@ -158,6 +171,10 @@ date: 2022-03-23
 <https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
 
 ![ldd-nucspec](images/qr/ldd-nucspec.png)
+
+### Objectives
+
+* Demonstrate tests for each schematron rule
 
 ## Document the tests
 
