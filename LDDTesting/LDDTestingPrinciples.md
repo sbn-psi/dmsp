@@ -1,7 +1,7 @@
 ---
 title: LDD Testing Principles
 author: Jesse Stone, PDS Small Bodies Node
-date: 2021-02-10
+date: 2022-03-23
 ---
 
 ## Why Tests?
@@ -68,6 +68,8 @@ date: 2021-02-10
 
 ## Demonstration - Display Dictionary Tests
 
+<https://github.com/pds-data-dictionaries/ldd-disp/tree/main/test>
+
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
@@ -90,6 +92,8 @@ date: 2021-02-10
 
 ## Demonstration - Survey Dictionary Tests
 
+<https://github.com/pds-data-dictionaries/ldd-survey/tree/main/test>
+
 ## Generating Test Labels
 
 * Hand writing labels
@@ -107,6 +111,8 @@ date: 2021-02-10
 * Examine the output of the test run to determine if there are any missed failures
 
 ## Demonstration - Spectral Dictionary Tests
+
+<https://github.com/pds-data-dictionaries/ldd-spectral/tree/main/test>
 
 ## Interpreting the test output for monolithic tests
 
@@ -137,6 +143,8 @@ date: 2021-02-10
 * This is especially important, since schematron rules can be prevented from triggering if incorrectly written.
 
 ## Demonstration - Nucspec Dictionary Tests
+
+<https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
 
 ## Document the tests
 
