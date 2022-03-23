@@ -70,6 +70,9 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-disp/tree/main/test>
 
+![ldd-disp](images/qr/ldd-disp.png)
+
+
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
@@ -94,6 +97,8 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-survey/tree/main/test>
 
+![ldd-survey](images/qr/ldd-survey.png)
+
 ## Generating Test Labels
 
 * Hand writing labels
@@ -113,6 +118,8 @@ date: 2022-03-23
 ## Demonstration - Spectral Dictionary Tests
 
 <https://github.com/pds-data-dictionaries/ldd-spectral/tree/main/test>
+
+![ldd-spectral](images/qr/ldd-spectral.png)
 
 ## Interpreting the test output for monolithic tests
 
@@ -146,6 +153,8 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
 
+![ldd-nucspec](images/qr/ldd-nucspec.png)
+
 ## Document the tests
 
 * Documentation can be as simple as a file that lists the test name and what it is testing.
@@ -167,3 +176,18 @@ especially as the number of tests grows.
 * LDDPreflight
   * Runs several of the new rules proposed at this meeting, and raises any voilations.
 * These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
+
+
+## Access this presentation
+
+### HTML
+
+<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingPrinciples>
+
+![HTML](images/qr/site.png)
+
+### PPT
+
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingPrinciples.pptx>
+
+![PPT](images/qr/presentation.png)
