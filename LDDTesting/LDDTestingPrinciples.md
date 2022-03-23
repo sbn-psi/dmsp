@@ -25,7 +25,7 @@ date: 2021-02-10
   * This evaluates the dictionary according to predefined rules, without necessarily comparing it against labels.
 * Regression testing and static analysis are complementary tools, and both are needed to fully evaluate a dictionary.
 
-## How do tests work
+## How do regression tests work
 
 * Upon a push to the repository, GitHub will:
   * Generate the LDDs
@@ -51,13 +51,16 @@ date: 2021-02-10
 ## Invalid Label tests
 
 * These are meant to illustrate labels that are incorrect
-* Additionally, they will detect if schematron rules are not running
+    * You would use these to illustrate the type of labels that you *do not* want a data provider to create.
+    * The could have incorrect values, be incomplete, or have too much (or conflicting) information.
+* Additionally, they will help detect if schematron rules are not running
 
 ## How do you write tests?
 
 * Create a label
   * This could involve creating a completely synthetic label, or using an existing label
   * The simpler the part that is not under test is, the better.
+      * Parts that are not being tested just obscure the purpose of the test.
 * If this is an invalid label test, introduce errors
 * Mark the label as a valid label test or an invalid label test
   * Add either `_VALID` or `_FAIL` to the end of the filename
@@ -68,7 +71,7 @@ date: 2021-02-10
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
-* Sometimes variations are necessary when a discipline arrea can apply to different data types
+* Sometimes variations are necessary when a discipline area can apply to different data types
 
 ## Monolithic tests vs granular tests
 
@@ -91,6 +94,7 @@ date: 2021-02-10
 
 * Hand writing labels
 * Injecting discipline area fragments into label templates
+    * In addition to making the labels easier to generate, the parts of the label that are being tested are separated from the rest of the label.
 * Mutating existing labels
     * Keep a mapping of *XPath*s and operations to perform on a location
 
