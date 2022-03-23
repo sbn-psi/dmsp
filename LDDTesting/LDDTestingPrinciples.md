@@ -101,11 +101,12 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-survey/tree/main/test>
 
-![ldd-survey](images/qr/ldd-survey.png)
 
 ### Objectives
 
 * Demonstrate granular tests
+
+![ldd-survey](images/qr/ldd-survey.png)
 
 ## Generating Test Labels
 
@@ -118,6 +119,11 @@ date: 2022-03-23
 ## Demonstration - LDD Test Generator
 
 <https://github.com/sbn-psi/ldd_utilities/tree/master/LddTestGenerator>
+
+### Objectives
+
+* Demonstrate a template-based approach to generating test labels
+* Mention how the framework could be expanded to mutate test files
 
 ![generator](images/qr/generator.png)
 
@@ -170,11 +176,11 @@ date: 2022-03-23
 
 <https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
 
-![ldd-nucspec](images/qr/ldd-nucspec.png)
-
 ### Objectives
 
 * Demonstrate tests for each schematron rule
+
+![ldd-nucspec](images/qr/ldd-nucspec.png)
 
 ## Document the tests
 
@@ -199,6 +205,10 @@ especially as the number of tests grows.
 * These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
 
 ## Demonstration - LDDPreflight
+
+### Objectives
+
+* Demonstrate using a tool to check for common problems that can be caught without regression tests.
 
 <https://github.com/sbn-psi/ldd_utilities/tree/master/LddPreflight>
 
