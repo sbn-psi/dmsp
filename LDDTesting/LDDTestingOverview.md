@@ -1,5 +1,5 @@
 ---
-title: LDD Testing Principles
+title: LDD Testing Overview
 author: Jesse Stone, PDS Small Bodies Node
 date: 2022-03-23
 ---
@@ -219,12 +219,12 @@ especially as the number of tests grows.
 
 ### HTML
 
-<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingPrinciples>
+<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingOverview>
 
 ![HTML](images/qr/site.png)
 
 ### PPT
 
-<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingPrinciples.pptx>
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingOverview.pptx>
 
 ![PPT](images/qr/presentation.png)

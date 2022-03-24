@@ -1,2 +1,2 @@
-stone-LDDTestingPrinciples.pptx: *.md images/qr/*.png
-	pandoc -o stone-LDDTestingPrinciples.pptx LDDTestingPrinciples.md
+stone-LDDTestingOverview.pptx: *.md images/qr/*.png
+	pandoc -o stone-LDDTestingOverview.pptx LDDTestingOverview.md
