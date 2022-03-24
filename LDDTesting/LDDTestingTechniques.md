@@ -39,6 +39,8 @@ date: 2022-03-24
 ### Objectives
 
 * Demonstrate granular tests
+* The tests in the survey dictionary each have one thing wrong with them,
+* This is enough the trip the validator. When a tests fails, it's for a single reason.
 
 ![ldd-survey](images/common/ldd-survey.png)
 
@@ -76,6 +78,10 @@ date: 2022-03-24
 ### Objectives
 
 * Demonstrate monolithic tests
+* The tests in the spectral dictionary have more than than one error introduced.
+* The errors are documented within the file.
+* This reduces the number of tests that need to be written. 
+* Additional processing beyond the current testing framework is needed to interpret the errors.
 
 ![ldd-spectral](images/common/ldd-spectral.png)
 
@@ -117,6 +123,11 @@ date: 2022-03-24
 ### Objectives
 
 * Demonstrate tests for each schematron rule
+* Each schematron rule in the nucspec dictionary has a corresponding test that fails the rule.
+  * Additional tests could be written to illustrate cases that pass each rule.
+  * Cases could also be written to illustrate cases where the rule does not apply.
+* There are multiple passing labels, which collectively exercise a variety of classes within the dictionary.
+
 
 ![ldd-nucspec](images/common/ldd-nucspec.png)
 
