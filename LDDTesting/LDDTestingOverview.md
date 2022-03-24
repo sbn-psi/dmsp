@@ -19,7 +19,7 @@ date: 2022-03-23
 
 * Regression testing
   * This method generates the dictionary, and validates special labels against the dictionary.
-    * Thse labels are specifically designed to pass or fail validation
+    * These labels are specifically designed to pass or fail validation
     * If the validation result does not match the intent of the label, then there is a problem with the dictionary.
 * Static analysis
   * This evaluates the dictionary according to predefined rules, without necessarily comparing it against labels.
@@ -28,12 +28,14 @@ date: 2022-03-23
 ## How do regression tests work
 
 * Upon a push to the repository, GitHub will:
-  * Generate the LDDs
-  * Run validate on every label with the generated LDD
+  * Generate and LDD from the ingest file
+  * Run validate on every label using the generated LDD
   * Interpret the results
-  * Mark the branch as passing/failing based on the results of the test
+  * Mark the commit as passing/failing based on the results of the test
 
 ## Demonstration - Pushing a dictionary to GitHub
+
+### Objectives
 
 * Show tests in progress
 * Show test results
