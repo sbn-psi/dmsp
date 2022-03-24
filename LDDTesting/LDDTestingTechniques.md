@@ -18,13 +18,13 @@ date: 2022-03-24
 
 ## Monolithic tests vs granular tests
 
-* EN's test processes are currently better suited for granular tests
+* The testing framework that we are using is better suited for granular tests
 * Monolithic tests are currently easier to generate and maintain
 
 ## Keeping tests granular
 
 * Each label is invalid in only one way
-* Combining multiple errors in a single file will mask errors that don't occur, since the testing framework is binary.
+* Combining multiple errors in a single file will mask errors that don't occur, since the testing framework only knows if a label passed of failed.
 
 ## Drawbacks to granular tests
 
@@ -82,7 +82,7 @@ date: 2022-03-24
 
 * Since monolithic tests have only a pass/fail result, and there are multiple expected failures, it's possible to miss failures
 * This can be mitigated by expecting a certain number of failures, or checking for specific failure messages
-    * This would require updates to the test runner
+    * This would require updates to the testing framework
 
 ## How many tests?
 
