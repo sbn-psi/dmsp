@@ -136,3 +136,9 @@ especially as the number of tests grows.
 <https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingTechniques.pptx>
 
 ![PPT](images/techniques/presentation.png)
+
+### PDF
+
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingTechniques.pdf>
+
+![PDF](images/techniques/pdf.png)

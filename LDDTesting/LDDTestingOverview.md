@@ -111,3 +111,9 @@ date: 2022-03-23
 <https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingOverview.pptx>
 
 ![PPT](images/overview/presentation.png)
+
+### PDF
+
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingOverview.pdf>
+
+![PDF](images/overview/pdf.png)
