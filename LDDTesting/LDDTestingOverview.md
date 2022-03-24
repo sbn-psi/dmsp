@@ -75,6 +75,11 @@ date: 2022-03-23
 ### Objectives
 
 * Demonstrate simple passing and failing tests.
+* The display dictionary contains a single type of schematron rule
+  * The horizontal display axis and vertial display axis each must match an axis name in the data object.
+* The tests consist of a valid label and two failing labels
+  * One where the horizontal display axis name doesn't match
+  * One where the vertical display axis name doesn't math
 
 ![ldd-disp](images/common/ldd-disp.png)
 
