@@ -221,10 +221,10 @@ especially as the number of tests grows.
 
 <https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingOverview>
 
-![HTML](images/qr/site.png)
+![HTML](images/qr/overview_page.png)
 
 ### PPT
 
 <https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingOverview.pptx>
 
-![PPT](images/qr/presentation.png)
+![PPT](images/qr/overview_presentation.png)
