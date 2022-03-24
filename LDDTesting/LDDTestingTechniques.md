@@ -89,6 +89,9 @@ date: 2022-03-24
 * You want to have enough to thoroughly test your dictionary.
   * Typically, this means that every class should be used at least once
   * Every schematron rule should pass and fail at least once, as well.
+
+## The case against too many tests
+
 * Too many tests can cause problems (This does *not* mean don't write tests)
   * The biggest problem with too many tests is that they need to be maintained
   * Maintenance can be necessary when either your dictionary changes, or when the dependencies change (IM changes, upstream dictionaries, etc)
@@ -116,11 +119,15 @@ date: 2022-03-24
 
 ![ldd-nucspec](images/common/ldd-nucspec.png)
 
-## Document the tests
+## Document the tests - What to document and why
 
-* Documentation can be as simple as a file that lists the test name and what it is testing.
+* Each test should somehow document what is being tested.
 * This will remind you how each test is expected to fail, or what each test is intended to exercise.
 * If writing a monolithic test, this can be further developed into the expected output for comparison in a future version of the EN testing tool.
+
+## Document the tests - What to document and why
+
+* Documentation can be as simple as a file that lists the test name and what it is testing.
 * Documentation can also be written inline. It would be valuable to note precisely which line should fail.
 
 ## Organize the tests
