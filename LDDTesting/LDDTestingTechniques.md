@@ -24,7 +24,7 @@ date: 2022-03-24
 ## Keeping tests granular
 
 * Each label is invalid in only one way
-* Combining multiple errors in a single file will mask errors that don't occur, since the testing framework only knows if a label passed of failed.
+* Combining multiple errors in a single file will mask errors that don't occur, since the testing framework only knows if a label passed or failed.
 
 ## Drawbacks to granular tests
 
@@ -95,7 +95,7 @@ date: 2022-03-24
 
 * You want to have enough to thoroughly test your dictionary.
   * Typically, this means that every class should be used at least once
-  * Every schematron rule should pass and fail at least once, as well.
+  * Every Schematron rule should pass and fail at least once, as well.
 
 ## The case against too many tests
 
@@ -109,21 +109,21 @@ date: 2022-03-24
 * At least one passing test should use each class
 * Write as many test files as necessary to achieve this.
 
-## Exercise every schematron rule
+## Exercise every Schematron rule
 
-* At least one invalid label test should fail each schematron rule.
-* At least one valid label test should pass each schematron rule
-* At least one valid label test should not trigger the schematron rule, if possible.
-* This is especially important, since schematron rules can be prevented from triggering if incorrectly written.
+* At least one invalid label test should fail each Schematron rule.
+* At least one valid label test should pass each Schematron rule
+* At least one valid label test should not trigger the Schematron rule, if possible.
+* This is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
 
-## Demonstration - Nucspec Dictionary Tests
+## Demonstration - Nuclear Spectroscopy Dictionary Tests
 
 <https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
 
 ### Objectives
 
-* Demonstrate tests for each schematron rule
-* Each schematron rule in the nucspec dictionary has a corresponding test that fails the rule.
+* Demonstrate tests for each Schematron rule
+* Each Schematron rule in the Nuclear Spectroscopy dictionary has a corresponding test that fails the rule.
   * Additional tests could be written to illustrate cases that pass each rule.
   * Cases could also be written to illustrate cases where the rule does not apply.
 * There are multiple passing labels, which collectively exercise a variety of classes within the dictionary.
