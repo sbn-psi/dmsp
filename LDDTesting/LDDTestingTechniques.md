@@ -42,9 +42,10 @@ date: 2022-03-24
 
 ![ldd-survey](images/common/ldd-survey.png)
 
-## Generating Test Labels
+## Producing Test Labels
 
 * Hand writing labels
+    * Labels are just XML files, and can be written in any text editor.
 * Injecting discipline area fragments into label templates
     * In addition to making the labels easier to generate, the parts of the label that are being tested are separated from the rest of the label.
 * Mutating existing labels
