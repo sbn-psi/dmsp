@@ -1,7 +1,7 @@
 ---
 title: LDD Testing Principles
 author: Jesse Stone, PDS Small Bodies Node
-date: 2021-02-10
+date: 2022-03-23
 ---
 
 ## Why Tests?
@@ -15,7 +15,17 @@ date: 2021-02-10
   * Regressions are unintended side-effects created by making changes
 * Warns if changes are not backwards-compatible
 
-## How do tests work
+## Testing methodologies
+
+* Regression testing
+  * This method generates the dictionary, and validates special labels against the dictionary.
+    * Thse labels are specifically designed to pass or fail validation
+    * If the validation result does not match the intent of the label, then there is a problem with the dictionary.
+* Static analysis
+  * This evaluates the dictionary according to predefined rules, without necessarily comparing it against labels.
+* Regression testing and static analysis are complementary tools, and both are needed to fully evaluate a dictionary.
+
+## How do regression tests work
 
 * Upon a push to the repository, GitHub will:
   * Generate the LDDs
@@ -41,13 +51,16 @@ date: 2021-02-10
 ## Invalid Label tests
 
 * These are meant to illustrate labels that are incorrect
-* Additionally, they will detect if schematron rules are not running
+    * You would use these to illustrate the type of labels that you *do not* want a data provider to create.
+    * The could have incorrect values, be incomplete, or have too much (or conflicting) information.
+* Additionally, they will help detect if schematron rules are not running
 
 ## How do you write tests?
 
 * Create a label
   * This could involve creating a completely synthetic label, or using an existing label
   * The simpler the part that is not under test is, the better.
+      * Parts that are not being tested just obscure the purpose of the test.
 * If this is an invalid label test, introduce errors
 * Mark the label as a valid label test or an invalid label test
   * Add either `_VALID` or `_FAIL` to the end of the filename
@@ -55,10 +68,19 @@ date: 2021-02-10
 
 ## Demonstration - Display Dictionary Tests
 
+<https://github.com/pds-data-dictionaries/ldd-disp/tree/main/test>
+
+### Objectives
+
+* Demonstrate simple passing and failing tests.
+
+![ldd-disp](images/qr/ldd-disp.png)
+
+
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
-* Sometimes variations are necessary when a discipline arrea can apply to different data types
+* Sometimes variations are necessary when a discipline area can apply to different data types
 
 ## Monolithic tests vs granular tests
 
@@ -77,14 +99,34 @@ date: 2021-02-10
 
 ## Demonstration - Survey Dictionary Tests
 
+<https://github.com/pds-data-dictionaries/ldd-survey/tree/main/test>
+
+
+### Objectives
+
+* Demonstrate granular tests
+
+![ldd-survey](images/qr/ldd-survey.png)
+
 ## Generating Test Labels
 
 * Hand writing labels
 * Injecting discipline area fragments into label templates
+    * In addition to making the labels easier to generate, the parts of the label that are being tested are separated from the rest of the label.
 * Mutating existing labels
     * Keep a mapping of *XPath*s and operations to perform on a location
 
 ## Demonstration - LDD Test Generator
+
+<https://github.com/sbn-psi/ldd_utilities/tree/master/LddTestGenerator>
+
+### Objectives
+
+* Demonstrate a template-based approach to generating test labels
+* Mention how the framework could be expanded to mutate test files
+
+![generator](images/qr/generator.png)
+
 
 ## Monolithic tests
 
@@ -93,6 +135,14 @@ date: 2021-02-10
 * Examine the output of the test run to determine if there are any missed failures
 
 ## Demonstration - Spectral Dictionary Tests
+
+<https://github.com/pds-data-dictionaries/ldd-spectral/tree/main/test>
+
+### Objectives
+
+* Demonstrate monolithic tests
+
+![ldd-spectral](images/qr/ldd-spectral.png)
 
 ## Interpreting the test output for monolithic tests
 
@@ -124,6 +174,14 @@ date: 2021-02-10
 
 ## Demonstration - Nucspec Dictionary Tests
 
+<https://github.com/pds-data-dictionaries/ldd-nucspec/tree/main/test>
+
+### Objectives
+
+* Demonstrate tests for each schematron rule
+
+![ldd-nucspec](images/qr/ldd-nucspec.png)
+
 ## Document the tests
 
 * Documentation can be as simple as a file that lists the test name and what it is testing.
@@ -135,3 +193,38 @@ date: 2021-02-10
 
 At minimum, tests should be organized into valid and invalid label tests. Although this is embedded in the name, sorting them will make it easier to find the test that you need,
 especially as the number of tests grows.
+
+## Static analysis tools
+
+* Validate tool
+  * Ingest LDD files are part of the PDS4 information model, just like products. This means that the validator can run against them.
+* LDDTool
+  * Catches many problems with a dictionary while it is being generated.
+* LDDPreflight
+  * Runs several of the new rules proposed at this meeting, and raises any voilations.
+* These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
+
+## Demonstration - LDDPreflight
+
+### Objectives
+
+* Demonstrate using a tool to check for common problems that can be caught without regression tests.
+
+<https://github.com/sbn-psi/ldd_utilities/tree/master/LddPreflight>
+
+![preflight](images/qr/preflight.png)
+
+
+## Access this presentation
+
+### HTML
+
+<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingPrinciples>
+
+![HTML](images/qr/site.png)
+
+### PPT
+
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingPrinciples.pptx>
+
+![PPT](images/qr/presentation.png)
