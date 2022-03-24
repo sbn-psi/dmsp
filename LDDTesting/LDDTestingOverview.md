@@ -9,8 +9,8 @@ date: 2022-03-23
 * Passing tests provide examples of how the dictionary is used
   * This is not a substitute for documentation, but can supplement it
 * Ensure that every class definition works as intended
-* Ensures that schematron tests are running
-  * Ensures that your schematron rules are correct
+* Ensures that Schematron tests are running
+  * Ensures that your Schematron rules are correct
 * Prevent regressions
   * Regressions are unintended side-effects created by making changes
 * Warns if changes are not backwards-compatible
@@ -55,7 +55,7 @@ date: 2022-03-23
 * These are meant to illustrate labels that are incorrect
     * You would use these to illustrate the type of labels that you *do not* want a data provider to create.
     * The could have incorrect values, be incomplete, or have too much (or conflicting) information.
-* Additionally, they will help detect if schematron rules are not running
+* Additionally, they will help detect if Schematron rules are not running
 
 ## How do you write tests?
 
@@ -75,8 +75,8 @@ date: 2022-03-23
 ### Objectives
 
 * Demonstrate simple passing and failing tests.
-* The display dictionary contains a single type of schematron rule
-  * The horizontal display axis and vertial display axis each must match an axis name in the data object.
+* The display dictionary contains a single type of Schematron rule
+  * The horizontal display axis and vertical display axis each must match an axis name in the data object.
 * The tests consist of a valid label and two failing labels
   * One where the horizontal display axis name doesn't match
   * One where the vertical display axis name doesn't math
@@ -91,7 +91,7 @@ date: 2022-03-23
 * LDDTool
   * Catches many problems with a dictionary while it is being generated.
 * LDDPreflight
-  * Runs several of the new rules proposed at this meeting, and raises any voilations.
+  * Runs several of the new rules proposed at this meeting, and displays any violations.
 
 ## Using static analysis tools
 
