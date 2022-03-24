@@ -4,6 +4,13 @@ author: Jesse Stone, PDS Small Bodies Node
 date: 2022-03-24
 ---
 
+## What should we keep in mind while writing tests?
+
+* Tests should be maintainable and understandable
+* Tests should be documented and well organized
+* Tests should provide good coverage
+* Tests should communicate the right amount of information
+
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
