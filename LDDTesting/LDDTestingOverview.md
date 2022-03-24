@@ -85,6 +85,9 @@ date: 2022-03-23
   * Catches many problems with a dictionary while it is being generated.
 * LDDPreflight
   * Runs several of the new rules proposed at this meeting, and raises any voilations.
+
+## Using static analysis tools
+
 * These should be run before the regression tests, since errors at this point are easier to catch, and some of them will prevent the dictionary from being generated, or will prevent regression tests from passing.
 
 ## Demonstration - LDDPreflight
