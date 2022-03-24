@@ -1,7 +1,7 @@
 ---
-title: LDD Testing Overview
+title: LDD Testing Techniques
 author: Jesse Stone, PDS Small Bodies Node
-date: 2022-03-23
+date: 2022-03-24
 ---
 
 ## Why Tests?
@@ -219,12 +219,12 @@ especially as the number of tests grows.
 
 ### HTML
 
-<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingOverview>
+<https://sbn-psi.github.io/dmsp/LDDTesting/LDDTestingTechniques>
 
-![HTML](images/overview/page.png)
+![HTML](images/techniques/page.png)
 
 ### PPT
 
-<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingOverview.pptx>
+<https://github.com/sbn-psi/dmsp/raw/main/LDDTesting/stone-LDDTestingTechniques.pptx>
 
-![PPT](images/overview/presentation.png)
+![PPT](images/techniques/presentation.png)
