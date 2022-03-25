@@ -4,12 +4,30 @@ author: Jesse Stone, PDS Small Bodies Node
 date: 2022-03-24
 ---
 
+## Recap of our goals with testing
+
+* Ensure that the dictionary does what we want it to do
+* Ensure that all class definitions are correct
+* Ensure that all of the schematron rules work
+* Prevent regressions
+* Detect non-backwards compatible changes
+
+
 ## What should we keep in mind while writing tests?
 
 * Tests should be maintainable and understandable
 * Tests should be documented and well organized
 * Tests should provide good coverage
 * Tests should communicate the right amount of information
+
+## Principles
+
+* Uniform labels
+* Granular or Monolithic tests?
+* Good test coverage
+* Minimize Redundancy
+* Documentation
+* Organization
 
 ## Keeping labels uniform
 
@@ -106,7 +124,9 @@ date: 2022-03-24
 
 ## Exercise every class
 
+* At minimum, at least one passing test should use each public class
 * At least one passing test should use each class
+* It is better to write tests specifically for this, so that other tests still have only one job.
 * Write as many test files as necessary to achieve this.
 
 ## Exercise every Schematron rule
@@ -114,7 +134,7 @@ date: 2022-03-24
 * At least one invalid label test should fail each Schematron rule.
 * At least one valid label test should pass each Schematron rule
 * At least one valid label test should not trigger the Schematron rule, if possible.
-* This is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
+* Exercising the schematron rules is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
 
 ## Demonstration - Nuclear Spectroscopy Dictionary Tests
 
@@ -137,15 +157,16 @@ date: 2022-03-24
 * This will remind you how each test is expected to fail, or what each test is intended to exercise.
 * If writing a monolithic test, this can be further developed into the expected output for comparison in a future version of the EN testing tool.
 
-## Document the tests - What to document and why
+## Document the tests - Where documentation goes
 
 * Documentation can be as simple as a file that lists the test name and what it is testing.
 * Documentation can also be written inline. It would be valuable to note precisely which line should fail.
 
 ## Organize the tests
 
-At minimum, tests should be organized into valid and invalid label tests. Although this is embedded in the name, sorting them will make it easier to find the test that you need,
-especially as the number of tests grows.
+* A simple way to organize tests is by sorting them into valid and invalid label tests. 
+    * Although this is embedded in the name, sorting them will make it easier to find the test that you need, especially as the number of tests grows.
+* If there are a large number of schematron rules, a good alternative would be to sort tests by schematron rule.
 
 
 
