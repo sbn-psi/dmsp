@@ -4,16 +4,17 @@ author: Jesse Stone, PDS Small Bodies Node
 date: 2022-03-23
 ---
 
+
+
 ## Why Tests?
 
-* Passing tests provide examples of how the dictionary is used
-  * This is not a substitute for documentation, but can supplement it
+* *Ensure that the dictionary actually works the way you intend*
 * Ensure that every class definition works as intended
 * Ensures that Schematron tests are running
   * Ensures that your Schematron rules are correct
 * Prevent regressions
   * Regressions are unintended side-effects created by making changes
-* Warns if changes are not backwards-compatible
+* Provides early-warning if changes are not backwards-compatible
 
 ## Testing methodologies
 
@@ -32,6 +33,16 @@ date: 2022-03-23
   * Run validate on every label using the generated LDD
   * Interpret the results
   * Mark the commit as passing/failing based on the results of the test
+
+## Running Tests without GitHub
+
+* You can do this, but it is currently a manual process
+* Build the data dictionary with LDDTool
+* Run the validate tool on each label in the test directory
+  * It would be easier to run the valid and invalid label tests separately
+* Examine the output
+* Push to GitHub if everything passes
+  * To developers, this is known as not breaking the build
 
 ## Demonstration - Pushing a dictionary to GitHub
 
