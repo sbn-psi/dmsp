@@ -124,7 +124,9 @@ date: 2022-03-24
 
 ## Exercise every class
 
+* At minimum, at least one passing test should use each public class
 * At least one passing test should use each class
+* It is better to write tests specifically for this, so that other tests still have only one job.
 * Write as many test files as necessary to achieve this.
 
 ## Exercise every Schematron rule
@@ -162,8 +164,9 @@ date: 2022-03-24
 
 ## Organize the tests
 
-At minimum, tests should be organized into valid and invalid label tests. Although this is embedded in the name, sorting them will make it easier to find the test that you need,
-especially as the number of tests grows.
+* A simple way to organize tests is by sorting them into valid and invalid label tests. 
+    * Although this is embedded in the name, sorting them will make it easier to find the test that you need, especially as the number of tests grows.
+* If there are a large number of schematron rules, a good alternative would be to sort tests by schematron rule.
 
 
 
