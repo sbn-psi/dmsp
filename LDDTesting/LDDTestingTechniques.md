@@ -20,6 +20,15 @@ date: 2022-03-24
 * Tests should provide good coverage
 * Tests should communicate the right amount of information
 
+## Principles
+
+* Uniform labels
+* Granular or Monolithic tests?
+* Good test coverage
+* Minimize Redundancy
+* Documentation
+* Organization
+
 ## Keeping labels uniform
 
 * Unnecessary variations in the label will make it more difficult to track down errors.
@@ -123,7 +132,7 @@ date: 2022-03-24
 * At least one invalid label test should fail each Schematron rule.
 * At least one valid label test should pass each Schematron rule
 * At least one valid label test should not trigger the Schematron rule, if possible.
-* This is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
+* Exercising the schematron rules is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
 
 ## Demonstration - Nuclear Spectroscopy Dictionary Tests
 
@@ -146,7 +155,7 @@ date: 2022-03-24
 * This will remind you how each test is expected to fail, or what each test is intended to exercise.
 * If writing a monolithic test, this can be further developed into the expected output for comparison in a future version of the EN testing tool.
 
-## Document the tests - What to document and why
+## Document the tests - Where documentation goes
 
 * Documentation can be as simple as a file that lists the test name and what it is testing.
 * Documentation can also be written inline. It would be valuable to note precisely which line should fail.
