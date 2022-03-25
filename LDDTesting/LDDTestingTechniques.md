@@ -4,6 +4,15 @@ author: Jesse Stone, PDS Small Bodies Node
 date: 2022-03-24
 ---
 
+## Recap of our goals with testing
+
+* Ensure that the dictionary does what we want it to do
+* Ensure that all class definitions are correct
+* Ensure that all of the schematron rules work
+* Prevent regressions
+* Detect non-backwards compatible changes
+
+
 ## What should we keep in mind while writing tests?
 
 * Tests should be maintainable and understandable
