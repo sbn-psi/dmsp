@@ -7,8 +7,8 @@ date: 2022-03-24
 ## Recap of our goals with testing
 
 * Ensure that the dictionary does what we want it to do
-* Ensure that all class definitions are correct
-* Ensure that all of the schematron rules work
+* Ensure that the data that is required is actually captured
+* Ensure that the schematron rules work
 * Prevent regressions
 * Detect non-backwards compatible changes
 
@@ -25,7 +25,7 @@ date: 2022-03-24
 * Uniform labels
 * Granular or Monolithic tests?
 * Good test coverage
-* Minimize Redundancy
+* Minimizing Redundancy
 * Documentation
 * Organization
 
@@ -36,13 +36,14 @@ date: 2022-03-24
 
 ## Monolithic tests vs granular tests
 
-* The testing framework that we are using is better suited for granular tests
-* Monolithic tests are currently easier to generate and maintain
+* Two possible styles of invalid label test are monolithic tests and granular tests
+* Monolithic tests have few labels with many introduced errors per test
+* Granular tests have many labels with few introduved errors per test
 
 ## Keeping tests granular
 
 * Each label is invalid in only one way
-* Combining multiple errors in a single file will mask errors that don't occur, since the testing framework only knows if a label passed or failed.
+* This simplified interpreting the results, both for you and for the testing framework.
 
 ## Drawbacks to granular tests
 
@@ -58,7 +59,7 @@ date: 2022-03-24
 
 * Demonstrate granular tests
 * The tests in the survey dictionary each have one thing wrong with them,
-* This is enough the trip the validator. When a tests fails, it's for a single reason.
+* This is enough the trip the validator. When a label fails, it's for a single reason.
 
 ![ldd-survey](images/common/ldd-survey.png)
 
@@ -77,7 +78,7 @@ date: 2022-03-24
 
 ### Objectives
 
-* Demonstrate a template-based approach to generating test labels
+* Demonstrate a template/mutation-based approach to generating test labels
 * Mention how the framework could be expanded to mutate test files
 
 ![generator](images/common/generator.png)
@@ -99,21 +100,21 @@ date: 2022-03-24
 * The tests in the spectral dictionary have more than than one error introduced.
 * The errors are documented within the file.
 * This reduces the number of tests that need to be written. 
-* Additional processing beyond the current testing framework is needed to interpret the errors.
+* You will need to check the output yourself occasionally to verify the overall test suite result.
 
 ![ldd-spectral](images/common/ldd-spectral.png)
 
 ## Interpreting the test output for monolithic tests
 
-* Since monolithic tests have only a pass/fail result, and there are multiple expected failures, it's possible to miss failures
-* This can be mitigated by expecting a certain number of failures, or checking for specific failure messages
-    * This would require updates to the testing framework
+* Monolithic tests require more interpretation that granular tests.
+* The testing system could miss labels that fail for the wrong reason
+* Log files are built with each push, so check in there for more information
 
 ## How many tests?
 
-* You want to have enough to thoroughly test your dictionary.
-  * Typically, this means that every class should be used at least once
-  * Every Schematron rule should pass and fail at least once, as well.
+* There are a lot of things that you can test for your dictionary.
+* Some tests are more valuable than others
+* Which tests are the most important to write?
 
 ## The case against too many tests
 
@@ -121,20 +122,21 @@ date: 2022-03-24
   * The biggest problem with too many tests is that they need to be maintained
   * Maintenance can be necessary when either your dictionary changes, or when the dependencies change (IM changes, upstream dictionaries, etc)
   * A test should have its own job -- it shouldn't just functionally duplicate another test
+    * More simply, keeping the same structure, but switching between valid values is not a high-value activity.
 
-## Exercise every class
+## Testing classes
 
-* At minimum, at least one passing test should use each public class
-* At least one passing test should use each class
+* You could write many tests to use each combination of classes, but this is not necessarily valuable.
+* It *is* more valuable to test the minimal description that you can include in each public class.
 * It is better to write tests specifically for this, so that other tests still have only one job.
-* Write as many test files as necessary to achieve this.
 
-## Exercise every Schematron rule
+## Exercising Schematron rules
 
-* At least one invalid label test should fail each Schematron rule.
-* At least one valid label test should pass each Schematron rule
-* At least one valid label test should not trigger the Schematron rule, if possible.
-* Exercising the schematron rules is especially important, since Schematron rules can be prevented from triggering if incorrectly written.
+* An invalid label test could fail on Schematron rules.
+* Valid label tests could pass on Schematron rule, or not trigger the rule at all
+* Exercising schematron rules is valuable, since they represent exceptions to the exisitng system.
+
+
 
 ## Demonstration - Nuclear Spectroscopy Dictionary Tests
 
