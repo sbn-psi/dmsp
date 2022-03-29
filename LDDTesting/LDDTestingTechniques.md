@@ -112,6 +112,7 @@ date: 2022-03-24
 
 ## How many tests?
 
+* *Any tests are better than no tests.*
 * There are a lot of things that you can test for your dictionary.
 * Some tests are more valuable than others
 * Which tests are the most important to write?
